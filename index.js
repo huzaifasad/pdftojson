@@ -66,7 +66,9 @@ function extractTextFromPDF(pdfFile) {
         }).catch(reject);
     });
 }
-
+app.get('/health', (req, res) => {
+    res.status(200).json({ message: 'API is up and running' });
+});
 async function processText(text) {
     try {
         const response = await openai.entities({
