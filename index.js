@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const openai = new OpenAI({
-    apiKey: 'pleae put your api key ' 
+    apiKey: process.env.OPENAI_API_KEY
   });
 
 const storage = multer.memoryStorage();
